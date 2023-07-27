@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg " id="navbar">
+    <nav class="navbar fixed-top navbar-expand-lg " id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">MUSEUM</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -32,7 +32,7 @@
     </nav>
 
     <section class="container-fluid px-0">
-        <div class="row align-items-center content">
+        <div class="row align-items-center content " id="home">
             <div class="col-lg-6">
                 <div class="text-white text-center d-none d-lg-block" id="tittle-head">
                     <h1>MUSEUM OF DINO</h1>
@@ -50,12 +50,30 @@
                     alt="">
             </div>
         </div>
-        <div class="row align-items-center content">
+        <div class="row align-items-center content" id="about">
             <div class="col-md-6 order-2 order-md-1">
                 <img src="https://img.freepik.com/free-vector/woman-with-kid-museum-cheerful-mother-daughter-looking-dinosaur-bones_575670-137.jpg?size=626&ext=jpg&ga=GA1.2.709184292.1689546890&semt=ais"
                     alt="">
             </div>
             <div class="col-md-6 text-center order-1 order-md-2">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-8 blurb pt-3">
+                        <h2>Museum of Ark</h2>
+                        <img src="https://img.freepik.com/free-vector/fossil-dinosaur-concept-illustration_114360-16853.jpg?size=626&ext=jpg&ga=GA1.2.709184292.1689546890&semt=ais"
+                            height="60" alt="" class="d-none d-lg-inline">
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sapiente
+                            voluptatibus enim tenetur in quo consequuntur minus et, explicabo velit nesciunt quam odio
+                            numquam vero eveniet eos ipsa sed iusto?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center content" id="ticket">
+            <div class="col-md-6 order-2 order-md-1">
+                <img src="https://img.freepik.com/free-vector/historical-museum-exhibition-with-dinosaur-skeletons_107791-13779.jpg?w=1060&t=st=1690447488~exp=1690448088~hmac=cd70dcd434e2d7cf18231ec34b6da6923052645c0b74c533f4fa527766d2106c"
+                    alt="">
+            </div>
+            <div class="col-md-6 text-center">
                 <div class="row justify-content-center">
                     <div class="col-10 col-lg-8 blurb pt-3">
                         <h2>Museum of Ark</h2>
@@ -75,6 +93,14 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function() {
+                let $nav = $('#navbar');
+                $nav.toggleClass('scrolled',$(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
 </body>
 
 </html>
